@@ -1,0 +1,72 @@
+.Table{
+    z-index: 1;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 80%;
+    background-color: rgb(32,32,32);
+    height: fit-content;
+    border: white 5px solid;
+    padding: 5px;
+    
+}
+
+.Name{
+    border-bottom: rgba(229, 25, 28, 1) solid 5px;
+}
+.Logo{
+    width: 100%;
+}
+.LogoDiv{
+    width: 400px;
+}
+.GameDiv{
+    width: fit-content;
+    float: right;
+}
+.Description{
+    width: 100%;
+}
+.DescriptionContent{
+    width: 100%;
+    padding: 10px;
+    border-top: rgba(229, 25, 28, 1) solid 5px;
+}
+.LogoGameTr{
+    display: inline-table;
+}
+.LogoTd{
+    width: 40%;
+}
+
+ /* https://www.w3schools.com/howto/howto_css_bullet_color.asp */
+ .games_ul
+ {
+     list-style: none; /* Remove default bullets */
+ }    
+ .games_ul li::before 
+ {
+     content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+     color: rgba(229, 25, 28, 1); /* Change the color */
+     font-weight: bold; /* If you want it to be bold */
+     display: inline-block; /* Needed to add space between the bullet and the text */
+     width: 1em; /* Also needed for space (tweak if needed) */
+     margin-left: -1em; /* Also needed for space (tweak if needed) */
+ }
+ /*  */
+
+ .game_name{ 
+    color: white;
+    /* font-family: 'persona'; */
+    text-shadow: 0 0 1px black,0 0 1px black,
+                 0 0 1px black,0 0 1px black,
+                 0 0 1px black,0 0 1px black,
+                 0 0 1px black,0 0 1px black;
+    transition: 0.5s;
+    
+}
+ .game_name:hover{
+    color:rgba(229, 25, 28, 1);      
+    font-size: 120%;
+    text-shadow: unset;
+}

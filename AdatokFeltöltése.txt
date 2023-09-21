@@ -1,0 +1,15 @@
+- Az adatbázisban kölün oszlopban eltároljuk hogy az adott adatot már elfogadta-e az admin 
+- Az adatott oldalakon csak akkor jelenjenek meg az adatok ha már elfogadta az admin 
+- A függõben lévõ adatokat csak az admin látja 
+	- Egy kis levél ikon legyen a username mellett és annak a jobb felsõ sarkán hogy mennyi üzenet van
+	- A függõben lévõ adat üzenet formája: 
+		- Egy ürlap legyen ami minden adatot lekérdez ami az adott táblához szükséges
+		- addig nem lehet elküldeni amíg minden adatot ki nem töltött a felhasználó
+		- (egy lenyitható felületen jelenjenek meg a formok(dátum szerint) vagy mindegyiknek csak a neve jelenik meg és az szolgál egy linkként)
+		- Adminoknak csak rá keljen nyomni hogy accept vagy decline
+
+Megvalósítás:
+	- Egy formban az adatokat amit kitölt a felhasználó elküldi az adatbázisnak ami elöször fügõõre rakja az adatokat
+	- Ha esetleg a felhasználó rosszúl írt valamit UPDATE-al az admin kitudja javítani(tehát amint rányomott az accept gombra hiába nem javított semmit akkor is UPDATE-olja)
+	- Ha pedig decline-olja akkor a DELETE-el kitöröljük azt az adatot az adatbázisból
+	- Ha már létezik az adott adat akkor a felhasználó ne tudja elküldeni és erre figyelmeztetni is kell (kész)

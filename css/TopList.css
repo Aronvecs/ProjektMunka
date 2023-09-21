@@ -1,0 +1,74 @@
+.TopListTable{
+    z-index: 1;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 80%;
+    background-color: rgb(32,32,32);
+    height: fit-content;
+    border: white 5px solid;
+    padding: 5px;
+    min-height: 500px;
+    display: block;
+}
+.gameimage{
+    height: 100px;
+    width: 100px;
+    object-fit:scale-down;
+}
+.TopListTable td{
+    text-align: center;   
+    padding-top: 5px;
+    width: 20%;
+    height: fit-content;
+}
+.TopListTable a{
+    padding: auto;
+}
+.TopListTable a:hover{
+    color: rgba(229, 25, 28, 1);
+}
+.gameimagetd{
+    
+    width: 105px;
+}
+.TopListTableHeader{
+    border: unset;
+    background-color: rgba(229, 25, 28, 1);
+    padding-bottom: 0px;
+}
+.OrderSelector{
+    height: 50px;
+}
+.OrderSelector td{
+    border: unset;
+    border-bottom: white solid 5px;
+    text-align:center;
+}
+.OrderSelector td:hover{
+    border-bottom: rgba(229, 25, 28, 1) solid 5px;
+}
+.selectedorder
+{
+    color: rgba(229, 25, 28, 1);
+}
+.OrderSelector td:hover{
+    border-bottom: rgba(229, 25, 28, 1) solid 5px;
+}
+.selectedorder
+{
+    transition: 0.5s;
+    color: white;
+}
+.OrderSelector .selectedtd {
+    transition: 0.3s;
+    background-color: rgba(229, 25, 28, 1);
+    border: unset;
+
+}
+.selectedtd:hover{
+    background-color: transparent;
+}
+big{
+    font-size: 30px;
+}

@@ -1,0 +1,123 @@
+.pictures{
+    height: 60%;
+    width: 30%;
+}
+.main-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+}
+#iframe{
+    height: 200px;
+    width: 70%;
+}
+form {
+    padding: 15px;
+}
+
+.registration input, textarea, select {
+    width: calc(100% - 18px);
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 3px solid black;
+    outline: none;
+    background-color: rgba(229, 25, 28, 0.75);
+    color: white;
+    text-shadow: 0 0 5px black,
+                 0 0 5px black,
+                 0 0 5px black,
+                 0 0 5px black;
+    border-radius: 10px;
+    font-size: 15px;
+}
+.registration input:hover, textarea:hover, select:hover{
+    background: darkred;
+}
+.registration input[type=submit], input[type=button] {
+    width: 101%;
+    padding: 8px;
+    border: none;
+    background: rgba(229, 25, 28, 0.75);
+    font-size: 16px;
+    font-weight: bold;
+    border: 3px solid black;
+    text-shadow: 0 0 5px black,
+                 0 0 5px black,
+                 0 0 5px black,
+                 0 0 5px black;
+    border-radius: 10px;
+}
+.registration input[type=submit]:hover, input[type=button] {
+    background: darkred;
+}
+
+.error{
+    border: 5px solid yellow !important;
+}
+
+select{
+    text-align: center;
+}
+.topnav a:hover {
+    background-color: rgba(229, 25, 28, 0.75);
+    border-radius: 5px;
+  }
+
+input::placeholder,textarea::placeholder {
+    color: white;
+    font-weight: bold;
+}
+
+.names{
+    margin-right: 5px;
+}
+@media (min-width: 568px) {
+    .main-block {
+        flex-direction: row;
+    }
+    .left-part, form {
+        width: 65%;
+    }
+    .name {
+        display: flex;
+    }
+    .name input,select {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 1400px) {
+    .main-block {
+        flex-direction: row;
+    }
+    .left-part, form {
+        width: 70%;
+    }
+    .name {
+        display: flex;
+    }
+    .name input,select {
+        width: 100%;
+    }
+    .registration {
+      width: 70%;
+    }
+  }
+@media only screen and (max-width: 1000px) {
+    .main-block {
+        flex-direction: row;
+    }
+    .left-part, form {
+        width: 90%;
+    }
+    .name {
+        display: flex;
+    }
+    .name input,select {
+        width: 100%;
+    }
+    .registration {
+      width: 70%;
+    }
+  }

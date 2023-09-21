@@ -1,0 +1,38 @@
+<IfModule mod_rewrite.c>  
+  RewriteEngine on  
+  RewriteCond %{REQUEST_FILENAME} !-f  
+  RewriteCond %{REQUEST_FILENAME} !-d 
+
+  RewriteRule ^SignUp$ signUp.php [QSA]
+  RewriteRule ^Login$ login.php [QSA]
+  RewriteRule ^profile/([A-Za-z0-9-]+)$ profil.php?name=$1 [QSA]
+
+  RewriteRule ^DataSend/([A-Za-z-]+)$ DataSend.php?dataType=$1 [QSA]
+  RewriteRule ^DataSend/Character/GameId-([0-9]+)$ DataSend.php?GameId=$1&dataType=Character [QSA]
+  RewriteRule ^DataSend/Publisher/GameId-([0-9]+)$ DataSend.php?GameId=$1&dataType=Publisher [QSA]
+  RewriteRule ^DataSend/Developer/GameId-([0-9]+)$ DataSend.php?GameId=$1&dataType=Developer [QSA]
+  RewriteRule ^DataSend/Genre/GameId-([0-9]+)$ DataSend.php?GameId=$1&dataType=Genre [QSA]
+  RewriteRule ^DataSend/VoiceActor/GameId-([0-9]+)/CharacterId-([0-9]+)$ DataSend.php?GameId=$1&CharacterId=$2&dataType=VoiceActor [QSA]
+  
+  RewriteRule ^MyList/([A-Za-z0-9-]+)$ MyList.php?username=$1&orderby=all [QSA]
+  RewriteRule ^MyList/([A-Za-z0-9-]+)/([A-Za-z0-9-\s]+)$ MyList.php?username=$1&orderby=$2 [QSA]
+  RewriteRule ^MyList/([A-Za-z0-9-]+)/([A-Za-z0-9-\s]+)/edit$ MyList.php?username=$1&orderby=$2&edit=edit [QSA]
+  
+  RewriteRule ^ListOfUnaccepted/([A-Za-z-]+)$ ListOfUnacceptedData.php?unaceptedDataType=$1 [QSA]
+  RewriteRule ^UnacceptedData/([A-Za-z0-9-_\s]+)/([0-9]+)$ UnacceptedData.php?UnacceptedData=$1&UDataIdx=$2 [QSA]
+
+  RewriteRule ^$ TopList.php?Order=OrderByRating [QSA]
+  RewriteRule ^Game/([0-9]+)$ Game_page.php?GameId=$1 [QSA]
+  RewriteRule ^Developer/([A-Za-z0-9-\s]+)$ Developer.php?Developer=$1 [QSA]
+  RewriteRule ^Publisher/([A-Za-z0-9-\s]+)$ Publisher.php?Publisher=$1 [QSA]
+  
+  RewriteRule ^Genres/([0-9]+)$ Genre.php?Genre=$1 [QSA]
+  RewriteRule ^DeveloperAndPublisherList/([A-Za-z]+)$ DevAndPubList.php?DevOrPublisher=$1 [QSA]
+  RewriteRule ^TopList/([A-Za-z-]+)$ TopList.php?Order=$1 [QSA]
+  
+  RewriteRule ^MainPage$ TopList.php?Order=$1 [QSA]
+  RewriteRule ^SignUp$ signUp.php [QSA]
+  RewriteRule ^Login$ login.php [QSA]
+  RewriteRule ^Error 404.php [QSA]
+  ErrorDocument 404 /404.php 
+</IfModule>
